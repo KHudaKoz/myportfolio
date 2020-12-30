@@ -39,7 +39,12 @@
     margin: 0;
     font-size: 36px;
     color: var(--primary-color);
-    text-shadow: 0 0 20px rgb(138, 169, 255);
+    text-shadow: 0 0 10px rgba(70, 70, 71, 0.75);
+    background-color: var(--primary-color);
+    right: 50px;
+    bottom: 20px;
+    padding: 10px;
+    border-radius: 10px;
   }
   
   header a {
@@ -63,7 +68,8 @@
     padding: 10px 15px;
     font-weight: lighter;
     font-size: 1.55vw;
-    text-shadow: 0 0 20px rgb(138, 169, 255);
+    text-shadow: 0 0 20px rgb(80, 83, 97);
+    text-decoration-line: underline;
   }
   
   header nav ul li a:hover {
@@ -97,17 +103,19 @@
     color: #fff;
     font-size: 18px;
     line-height: 1.2;
-    font-style: italic; 
+    font-style: italic;  
   }
 
   .coolq h2 {
-    font-size: 36px;
+    font-size: 24px;
     color: var(--secondary-color);
-    text-shadow: 0 0 20px rgb(138, 169, 255);
+    background-color: var(--primary-color);
+    text-shadow: 0 0 10px rgba(70, 70, 71, 0.75);
     position: absolute;
-    right: 0px;
-    bottom: 0px;
-    padding: 21px;
+    right: 50px;
+    bottom: 20px;
+    padding: 10px;
+    border-radius: 10px;
   }
   
 /* END HERO */
@@ -120,12 +128,12 @@
   .all-me h2 {
     color: var(--tertiary-color);
     border-right: 3px solid var(--tertiary-color);
+    text-align: left;
         
   }
  .me {
     border: 1px solid var(--secondary-color);
     display: flex;
-    justify-content: start;
     padding: 5px 20px;
     font-size: 16px;
     color: var(-tertiary-color);
@@ -194,7 +202,7 @@ footer {
   }
 
   footer h2 {
-    display: inline;
+    display: end;
     color: var(--secondary-color);
     font-size: 24px;
     margin: 0;
@@ -202,4 +210,5 @@ footer {
 
   .flex-row {
     display: flex;
+    justify-content: end;
   }
