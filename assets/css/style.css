@@ -76,6 +76,11 @@
  
   section {
     padding: 20px;
+    width: 100%;
+    margin: 020px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
   }
 
   .hero  {
@@ -111,6 +116,24 @@
   }
   
 /* END HERO */
+
+/* STAR SECTION STYLING WITH FLEX*/
+
+ .me {
+    width: 100%;
+    margin: 020px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    order: 2;
+  }
+
+  .me-me {
+    margin: 20px;
+    flex: 1;
+    background: var(--secondary-color);
+    color: var(--primary-color);
+  }
 
 /* BEGIN FOOTER */
 footer {
