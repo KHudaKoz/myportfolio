@@ -150,7 +150,7 @@ position: sticky;
      text-align: end;
      overflow: hidden;
  }
- 
+ /* BREAKING UP WORDS OF H2 */
 
   /* WORKING ON NESTED FEATURES */
 
@@ -257,7 +257,6 @@ color: var(--secondary-color);
 
 .contact > div {
   border-bottom: 2px #ccc solid;
-
   padding: 5px;
   justify-content: stretch;
   align-self: center;
@@ -267,7 +266,7 @@ color: var(--secondary-color);
               text-align: center;
           }
 
-  .contact box {
+  .contact {
       flex-basis: 20%;
       flex-wrap: wrap;
   }
@@ -285,6 +284,8 @@ footer h2 {
   font-size: 24px;
   margin: 0;
 }
+
+
 /* START CONTACT CSS */
 
 /* MEDIA QUIERY  */
@@ -328,35 +329,78 @@ footer h2 {
 
 @media screen and (max-width: 575px) {
 
-  .wrapper > p {
-    font-size: 10px;
+ .wrapper {
+grid-template-columns: 1fr; 
+
+}
+
+.wrapper > div {
+  background-color: var(--secondary-color);
+  padding: 1em;
+  grid-gap: 1em;
+  border-bottom: 3px solid var(--tertiary-color);
+  border-right: none;
+}
+  .wrapper h2 {
+    font-size: 20px;
+    text-align: center;
+    overflow: hidden;
   }
+
+  .wrapper > p {
+    font-size: 16px;
+    padding-right: 15px;
+  }
+
+  /* gitting rid of space */
 
   .nested-item {
    grid-template-columns: 1fr 1fr;
  }
 
  .nested-item-1.nested-item {
-   grid-column: 1 / -1;
+   grid-column: 1;
 
  }
 
 
  .nested-item-3.nested-item {
-   grid-column: 1 / -1;
+   grid-column: 1;
  }
 
 
  .nested-item-5.nested-item{
-   grid-column: 1/ -1;
+   grid-column: 1;
  }
  
  .nested-item-2.nested-item{
-   grid-column: 1/ -1;
+   grid-column: 1;
  }
 
  .nested-item-4.nested-item {
-   grid-column: 1 / -1;
-  
+   grid-column: 1;
+ }
  
+   .contact {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:space-around;
+}
+
+.contact > div {
+  border-bottom: 0px #ccc solid;
+  border-bottom: 2px var(--secondary-color) solid;
+  padding: 10px;
+  justify-content: stretch;
+  align-self: center;
+} 
+          .box {
+              flex: 1;
+              text-align: center;
+          }
+
+  .contact {
+      flex-basis: 20%;
+      flex-wrap: wrap;
+   
 }
