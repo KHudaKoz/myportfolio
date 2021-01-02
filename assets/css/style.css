@@ -112,7 +112,7 @@ position: sticky;
 .coolq h2 {
   font-size: 24px;
   color: var(--secondary-color);
-  background-color: var(--primary-color);
+  background-color: var(--primary-color, 0.5);
   text-shadow: 0 0 10px rgba(70, 70, 71, );
   position: absolute;
   right: 50px;
@@ -126,7 +126,7 @@ position: sticky;
 /* CREATING MAIN WRAPPER */
 .wrapper {
     display: grid;
-    grid-template-columns: 15% 80%;
+    grid-template-columns: 20% 75%;
     grid-gap: 2em;
     grid-auto-rows: minmax(150px);
     Padding: 10px
@@ -139,13 +139,18 @@ position: sticky;
     border-right: 3px solid var(--tertiary-color);
 }
 
+.wrapper > p {
+  font-size: 18px;
+}
+
  /* HEADER TWO */
 
  .wrapper h2 {
-     font-size: 36px;
+     font-size: 24px;
      text-align: end;
-     overflow: auto;
+     overflow: hidden;
  }
+ 
 
   /* WORKING ON NESTED FEATURES */
 
@@ -175,6 +180,8 @@ position: sticky;
   font-size: 0.9rem;
 }
 
+
+
 /* CSS GRID DIVID UP */
 .nested-item:first-child {
   grid-column: span 8;
@@ -199,14 +206,25 @@ color: var(--secondary-color);
 
 .nested div {
   border: 4px var(--tertiary-color) solid;
+  padding-right: 50px;
+  background-color: var(--tertiary-color);
+  padding: 10px 50px 10px 0px;
+}
+
+.nested a {
+  border: 4px var(--tertiary-color) solid;
   border-radius: 25px;
   padding-right: 50px;
 }
 
+.tt { 
+  overflow: hidden;
+}
 /* WORK NESTED ITEMS BACK GROUND */
 .nested-item-1 {
   background-image: url("../images/run.png");
   background-size: cover;
+  
   }
 
 .nested-item-2 {
@@ -229,10 +247,6 @@ color: var(--secondary-color);
   background-size: cover;
   }
 
-.nested a {
-  background-color: var(--tertiary-color);
-  padding: 10px 50px 10px 0px;
-}
 
   /* Start of Contact Nesting */
 .contact {
@@ -259,17 +273,90 @@ color: var(--secondary-color);
   }
 /* BEGIN FOOTER */
 footer {
-  background: var(--tertiary-color);
-  color: var(--secondary-color);
+  background: var(--secondary-color);
+  color: var(--tertiary-color);
   width: 100%;
   padding: 40px 35px;
 }
 
 footer h2 {
   display: end;
-  color: var(--secondary-color);
+  color: va(--tertiary-color);
   font-size: 24px;
   margin: 0;
 }
 /* START CONTACT CSS */
 
+/* MEDIA QUIERY  */
+/* 1020 px */
+
+@media screen and (max-width: 1020px) {
+
+  .wrapper > p {
+    font-size: 14px;
+  }
+   .nested-item {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .nested-item-1.nested-item {
+    grid-column: 1 / -1;
+    grid-row: 1;
+  }
+
+
+  .nested-item-3.nested-item {
+    grid-column: 1 / -1;
+  }
+
+ 
+  .nested-item-5.nested-item{
+    grid-column: 1/ -1;
+  }
+  
+  .nested-item-2.nested-item{
+    grid-column: 1/ -1;
+  }
+
+  .nested-item-4.nested-item {
+    grid-column: 1 / -1;
+   
+  
+}
+
+
+
+@media screen and (max-width: 575px) {
+
+  .wrapper > p {
+    font-size: 10px;
+  }
+
+  .nested-item {
+   grid-template-columns: 1fr 1fr;
+ }
+
+ .nested-item-1.nested-item {
+   grid-column: 1 / -1;
+
+ }
+
+
+ .nested-item-3.nested-item {
+   grid-column: 1 / -1;
+ }
+
+
+ .nested-item-5.nested-item{
+   grid-column: 1/ -1;
+ }
+ 
+ .nested-item-2.nested-item{
+   grid-column: 1/ -1;
+ }
+
+ .nested-item-4.nested-item {
+   grid-column: 1 / -1;
+  
+ 
+}
