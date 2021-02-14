@@ -227,7 +227,7 @@ color: var(--secondary-color);
 }
 /* WORK NESTED ITEMS BACK GROUND */
 .nested-item-1 {
-  background-image: url("../images/Boredinhouse.png");
+  background-image: url("../.png");
   background-size: cover;
   
   }
@@ -248,7 +248,7 @@ color: var(--secondary-color);
   }     
 
 .nested-item-5 {
-  background-image: url("../images/run.png");
+  background-image: url("../images/pfi1.png");
   background-size: cover;
   }
 
